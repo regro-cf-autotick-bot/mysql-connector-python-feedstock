@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mysql-connector-python
-  version: "9.6.0"
+  version: "9.7.0"
   major_minor: ${{ (version | split('.'))[:2] | join('.') }}
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/mysql/mysql-connector-python/archive/${{ version }}.tar.gz
-  sha256: 8d1b2a52a8183bbfee20ac8be0e31a2420504a35f9223badd0756627b5226ecf
+  sha256: 5475b1911a5dc9c39c4571f88927d54559de0a25d1011d095f520893693989e7
   patches:
     - patches/0001-Typecast-password-to-const-char-explicitly-py3.patch
     - patches/0002-Fix-location-for-searching-mysql-headers-and-libs-on.patch
@@ -20,7 +20,7 @@ source:
     - patches/0005-Delete-openssl-vendor-ed-libs-only-if-provided.patch
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
